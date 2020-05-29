@@ -45,10 +45,10 @@ namespace CodeBlogFitness.BL.Model
         /// </param>
         /// <param name="height">Рост.
         /// </param>
-        public User(string name, 
-            Gender gender,
+        public User(string name,
+            Gender gender, 
             DateTime birthDate,
-            double weight, 
+            double weight,
             double height)
         {
             #region Проверка условий
@@ -56,11 +56,11 @@ namespace CodeBlogFitness.BL.Model
             {
                 throw new ArgumentNullException("Имя пола не может быть пустым или null", nameof(name));
             }
-            if(Gender==null)
+            if (Gender == null)
             {
                 throw new ArgumentNullException("пол не может быть пустым или null", nameof(gender));
             }
-            if (birthDate < DateTime.Parse("01.01.1900") ||birthDate>=DateTime.Now)
+            if (birthDate < DateTime.Parse("01.01.1900") || birthDate >= DateTime.Now)
             {
                 throw new ArgumentException(" не может быть пустым или null", nameof(birthDate));
             }
